@@ -42,5 +42,11 @@ namespace ShapeTheShape
             point2 += 10;
             point2.DisplayCoordinates();
         }
+
+        public void showcaseTriangleClass(int a, int b, int c) { }
+        static void Main(string[] args)
+        {
+
+        }
     }
 }
