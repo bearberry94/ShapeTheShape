@@ -4,7 +4,7 @@ namespace ShapeTheShape
 {
     class Program
     {
-        public void showcasePointClass(int a, int b) {
+        public static void ShowcasePointClass(int a, int b) {
             Point point1 = new Point();
             Console.WriteLine("Created Point obj with coordinates ({0}, {1})", point1.X, point1.Y);
             Console.WriteLine("DisplayCoordinates() displays the point's coordinates.");
@@ -25,7 +25,7 @@ namespace ShapeTheShape
             point2.MultiplyYByScalar = 3;
             point2.DisplayCoordinates();
 
-            Console.WriteLine("\nPoint[0] accesses the x-value, and Point[1] accesses the y-value.\nCoordinates are: ({0},{1}). Any other index will return an error\nE.g. Point[5]: {2}", point2[0], point2[1], point2[5]);
+            Console.WriteLine("\nPoint[0] accesses the x-value, and Point[1] accesses the y-value.\nCoordinates are: ({0},{1}). Any other index will return an error", point2[0], point2[1]);
 
             Console.WriteLine("\nPoint++ increases both x and y by 1.");
             point2.DisplayCoordinates();
@@ -43,10 +43,37 @@ namespace ShapeTheShape
             point2.DisplayCoordinates();
         }
 
-        public void showcaseTriangleClass(int a, int b, int c) { }
+        public static void ShowcaseTriangleClass(int a, int b, int c)
+        {
+            Triangle triangle = new Triangle(a, b, c);
+            Console.WriteLine("\nCreated Triangle obj with sides {0}, {1}, {2}", triangle.A, triangle.B, triangle.C);
+            triangle.DisplaySides();
+
+            Console.WriteLine("\nCalculatePerimeter() calculates the triangle's perimeter. Perimeter = {0}", triangle.CalculatePerimeter());
+
+            Console.WriteLine("\nCalculateArea() calculates the triangle's area. Area = {0:.00}", triangle.CalculateArea());
+
+            Console.WriteLine("\nTriangle true/false establishes whether such a triangle can even exist. Does our triangle exist?: {0}", triangle.TriangleExists());
+            
+            Console.WriteLine("\nTriangle[0/1/2] access the triangle's a/b/c side.. Any other index will throw an error\n. E.g. Triangle ({0}, {1}, {2})", triangle[0], triangle[1], triangle[2]);
+            
+            Console.WriteLine("\nTriangle++ increases all the triangle's sides by 1.");
+            triangle++;
+            triangle.DisplaySides();
+
+            Console.WriteLine("\nTriangle-- decreases all the triangle's sides by 1.");
+            triangle--;
+            triangle.DisplaySides();
+
+            Console.WriteLine("\nTriangle * x multiplies all the triangle's sides by x. E.g. multiply by 5.");
+            triangle.DisplaySides();
+            triangle *= 5;
+            triangle.DisplaySides();
+  
+        }
         static void Main(string[] args)
         {
-
+            ShowcaseTriangleClass(1, 2, 3);
         }
     }
 }

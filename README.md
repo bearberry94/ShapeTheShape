@@ -27,7 +27,7 @@ Tasks to do:
 		2.3.2 calculate the triangle's perimeter
 		2.3.2 calculate the triangle's area
 	2.4 Properties that can:
-		2.4.1 get-set the triangle'ssides (read and write)
+		2.4.1 get-set the triangle's sides (read and write)
 		2.4.2 establish whether or not there exists a triangle with such sides (read only)
 	2.5 Indexer that allows to access the a-value with [0], b-value with [1], and c-value with [2].
 		Note:Note: It should display an error message if the index is anything other than 0 or 1 or 2.
