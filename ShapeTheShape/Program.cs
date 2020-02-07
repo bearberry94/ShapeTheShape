@@ -5,11 +5,6 @@ namespace ShapeTheShape
     class Program
     {
         public static void ShowcasePointClass(int a, int b) {
-            Point point1 = new Point();
-            Console.WriteLine("Created Point obj with coordinates ({0}, {1})", point1.X, point1.Y);
-            Console.WriteLine("DisplayCoordinates() displays the point's coordinates.");
-            point1.DisplayCoordinates();
-
             Point point2 = new Point(a, b);
             Console.WriteLine("\nCreated Point obj with coordinates ({0}, {1})", point2.X, point2.Y);
 
@@ -73,7 +68,7 @@ namespace ShapeTheShape
         }
         static void Main(string[] args)
         {
-            ShowcaseTriangleClass(1, 2, 3);
+            ShowcasePointClass(5, 7);
         }
     }
 }

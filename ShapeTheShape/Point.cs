@@ -87,13 +87,7 @@ namespace ShapeTheShape
             return point;
         }
 
-        public Point()
-        {
-            X = 0;
-            Y = 0;
-        }
-
-        public Point(int x, int y)
+        public Point(int x=0, int y=0)
         {
             X = x;
             Y = y;
