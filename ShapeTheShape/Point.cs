@@ -26,16 +26,9 @@ namespace ShapeTheShape
         {
             get
             {
-                try
-                {
-                    if (i == 0) { return X; }
-                    else if (i == 1) { return Y; }
-                    else { throw new Exception("Error: invalid index"); }
-                } catch (Exception e)
-                {
-                    Console.WriteLine(e);
-                    return -1;
-                }
+                if (i == 0) { return X; }
+                else if (i == 1) { return Y; }
+                else { throw new Exception("Error: invalid index"); }
             }
         }
         
