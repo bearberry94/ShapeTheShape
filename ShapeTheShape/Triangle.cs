@@ -41,11 +41,7 @@ namespace ShapeTheShape
                 if (i == 0) { return A; }
                 else if (i == 1) { return B; }
                 else if (i == 2) { return C; }
-                else
-                {
-                    Console.WriteLine("Error: invalid index");
-                    return -1;
-                }
+                else { throw new Exception("Error: invalid index"); }
             }
         }
 

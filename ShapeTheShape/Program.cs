@@ -59,7 +59,15 @@ namespace ShapeTheShape
             Console.WriteLine("\nTriangle true/false establishes whether such a triangle can even exist. Does our triangle exist?: {0}", triangle.TriangleExists());
             
             Console.WriteLine("\nTriangle[0/1/2] access the triangle's a/b/c side.. Any other index will throw an error\n. E.g. Triangle ({0}, {1}, {2})", triangle[0], triangle[1], triangle[2]);
-            
+            Console.WriteLine("If the index is out of bounds, the program will exit with an error.\nFor the sake of this exercise, we will catch the error and continue with the code.\n");
+            try
+            {
+                Console.WriteLine(triangle[8]);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
             Console.WriteLine("\nTriangle++ increases all the triangle's sides by 1.");
             triangle++;
             triangle.DisplaySides();
@@ -77,6 +85,7 @@ namespace ShapeTheShape
         static void Main(string[] args)
         {
             ShowcasePointClass(5, 7);
+            ShowcaseTriangleClass(4, 2, 5);
         }
     }
 }
