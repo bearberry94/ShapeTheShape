@@ -79,13 +79,49 @@ namespace ShapeTheShape
             Console.WriteLine("\nTriangle * x multiplies all the triangle's sides by x. E.g. multiply by 5.");
             triangle.DisplaySides();
             triangle *= 5;
-            triangle.DisplaySides();
-  
+            triangle.DisplaySides();  
+        }
+
+        public static void ShowcaseRectangleClass(int a, int b)
+        {
+            Rectangle rectangle = new Rectangle(a, b);
+            Console.WriteLine("\nCreated Rectangle obj with sides {0}, {1}", rectangle.A, rectangle.B);
+            rectangle.DisplaySides();
+
+            Console.WriteLine("\nCalculatePerimeter() calculates the rectangle's perimeter. Perimeter = {0}", rectangle.CalculatePerimeter());
+
+            Console.WriteLine("\nCalculateArea() calculates the rectangle's area. Area = {0}", rectangle.CalculateArea());
+
+            Console.WriteLine("\nRectangle true/false establishes whether the rectangle is a square.\nIs our rectangle a square: {0}", rectangle.CheckIfSquare());
+
+            Console.WriteLine("\nRectangle[0/1/2] access the rectangle's a/b side.. Any other index will throw an error\n. E.g. Rectangle ({0}, {1})", rectangle[0], rectangle[1]);
+            Console.WriteLine("If the index is out of bounds, the program will exit with an error.\nFor the sake of this exercise, we will catch the error and continue with the code.\n");
+            try
+            {
+                Console.WriteLine(rectangle[8]);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+            Console.WriteLine("\nRectangle++ increases all the rectangle's sides by 1.");
+            rectangle++;
+            rectangle.DisplaySides();
+
+            Console.WriteLine("\nRectangle-- decreases all the rectangle's sides by 1.");
+            rectangle--;
+            rectangle.DisplaySides();
+
+            Console.WriteLine("\nRectangle * x multiplies all the rectangle's sides by x. E.g. multiply by 5.");
+            rectangle.DisplaySides();
+            rectangle *= 5;
+            rectangle.DisplaySides();
         }
         static void Main(string[] args)
         {
-            ShowcasePointClass(5, 7);
-            ShowcaseTriangleClass(4, 2, 5);
+            //ShowcasePointClass(5, 7);
+            //ShowcaseTriangleClass(4, 2, 5);
+            ShowcaseRectangleClass(4, 4);
         }
     }
 }
